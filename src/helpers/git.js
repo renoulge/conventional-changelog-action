@@ -123,8 +123,9 @@ module.exports = new (class Git {
    * Creates git tag
    *
    * @param tag
+   * @param message
    * @return {Promise<>}
    */
-  createTag = tag => this.exec(`tag -a ${tag} -m "${tag}"`)
+  createTag = (tag,message) => this.exec(`tag -a ${tag} -m "${message}"`)
 
 })()
